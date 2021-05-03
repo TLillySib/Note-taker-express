@@ -16,6 +16,10 @@ module.exports = (app) => {
         updateDb();
         return console.log("New note: " + newNote.title + "added");
       });
+
+
+
+      
     // Access noteId via: req.params.noteId-display json for notes array indices of given id
       app.get('/api/notes/:id', (req, res) => {
         res.json(notes[req.params.id]);
